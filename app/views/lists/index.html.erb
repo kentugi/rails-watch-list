@@ -1,10 +1,17 @@
-<div class="container">
 
-<h1>Your lists</h1>
-<% @lists.each do |list| %>
-  <ul>
-    <li><%= link_to list.name, list_path(list.id)%></li>
-  </ul>
-<% end %>
-<%= link_to 'Add new list', new_list_path %>
-</div>
+<div class="container">
+ <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mothers-day-movies-1583531470.jpg);">
+    <div class="container">
+      <h1>Create your own movie list!</h1>
+      <p>Watch the best movies with your family every day!</p>
+      <%= link_to 'Add new list', new_list_path, class: "btn btn-flat" %>
+      <%# <a class="btn btn-flat" href="#">Apply now</a> %>
+    </div>
+  </div>
+
+  <% @lists.each do |list| %>
+    <ul>
+      <li><%= link_to list.name, list_path(list.id)%></li>
+    </ul>
+  <% end %>
+  </div>
